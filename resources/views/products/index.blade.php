@@ -1,13 +1,22 @@
 @extends('layouts.app')
 @section('content')
-<div class="d-flex justify-content-between align-items-center mb-4">
-    <h2 class="text-primary fw-bold">📦 Inventory Dashboard</h2>
+<div class="dashboard-header d-flex justify-content-between align-items-center p-4 mb-4">
+    <div>
+        <h2 class="fw-bold mb-1">
+            📦 Inventory Dashboard
+        </h2>
+        <p class="mb-0">
+            Inventory Management System
+        </p>
+    </div>
+
     <form method="POST" action="{{ route('logout') }}">
         @csrf
-        <button type="submit" class="btn btn-outline-danger fw-semibold">
+        <button type="submit" class="btn logout-btn fw-semibold">
             ⏻ Log out
         </button>
     </form>
+</div>
 </div>
 @if(session('success'))
 <div class="alert alert-success alert-dismissible fade show" role="alert">
